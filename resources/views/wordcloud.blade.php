@@ -97,8 +97,12 @@
             .on('mousemove', (evt, d) => {
               tooltip.style('left', evt.pageX + 'px').style('top', evt.pageY + 'px')
                 .style('opacity', 1)
-                .html(`${d.text}<br><small>size: ${d.size}</small>`);
+                .html(`
+            <b>${d.text}</b><br>
+            <small>Độ quan trọng (score): ${(d.size - 12) / 52 .toFixed(2)}</small><br>
+         `);
             })
+
             .on('mouseleave', () => tooltip.style('opacity', 0))
             .on('click', (evt, d) => {
               alert(`Bạn vừa click: ${d.text}`);
