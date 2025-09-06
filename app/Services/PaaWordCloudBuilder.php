@@ -28,7 +28,7 @@ class PaaWordCloudBuilder
             return [];
 
         $text = implode(". ", $questions);
-
+        
         // Gọi API Python KeyBERT
         $phrases = app(\App\Services\KeyphraseService::class)->extract($text, $topK);
 
