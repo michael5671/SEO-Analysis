@@ -21,6 +21,11 @@
             style="background:#f3f4f6;color:#111;padding:8px 12px;border-radius:8px;text-decoration:none;border:1px solid #e5e7eb">
             🔎 Xem bảng liên quan (heatmap)
         </a>
+        <a href="{{ route('wordcloud.show', ['id' => $run->id]) }}"
+            style="background:#2563eb;color:#fff;padding:8px 12px;border-radius:8px;text-decoration:none">
+            ☁️ Word Cloud PAA
+        </a>
+
     </p>
 
 
